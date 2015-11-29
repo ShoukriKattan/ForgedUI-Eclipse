@@ -8,7 +8,7 @@ What the editor allows one to do; similar to Google Android Studio and to Apple'
 * If you need help getting started and wish to fork this project, feel free to do so, and feel free to contact if you need help.
 
 
-##How the editor works at a high level:
+##How the editor works :
 This editor is based on Eclipse GEF (https://eclipse.org/gef/). In a nutshell GEF is an MVC framework for building various drag and drop editors.
 
 This editor works as follows : 
@@ -20,7 +20,7 @@ This editor works as follows :
 - The editor files are serialized to XML files that the editor uses to persist the tree and its properties. 
 
 
-##The projects are as follow : 
+##The Eclipse projects 
 
 The main editor feature is found in com.forgedui.features.editor
 
@@ -39,10 +39,13 @@ This feature requires the following plugins (Eclipse or various projects):
 
 ###Project Plugins
 - com.forgedui.core
-- - This project contains the base model. 
+- - This project contains the base model that code gen part uses to build JS files. 
 - com.forgedui.editor
+- - Eclipse GEF MVC project / Eclipse project that includes Editors, Perspectives, Palettes, etc. 
 - com.forgedui.common.deps
+- - Additional 3rd party depenencies that don't have their own repositories
 - com.forgedui.xstream
+- - XML Serialization library (XStream) 
 
 
 
