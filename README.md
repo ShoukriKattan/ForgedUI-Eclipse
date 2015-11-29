@@ -38,14 +38,10 @@ This feature requires the following plugins (Eclipse or various projects):
 
 
 ###Project Plugins
-- com.forgedui.core
-- - This project contains the base model that code gen part uses to build JS files. 
-- com.forgedui.editor
-- - Eclipse GEF MVC project / Eclipse project that includes Editors, Perspectives, Palettes, etc. 
-- com.forgedui.common.deps
-- - Additional 3rd party depenencies that don't have their own repositories
-- com.forgedui.xstream
-- - XML Serialization library (XStream) 
+- com.forgedui.core : This project contains the base model that code gen part uses to build JS files. 
+- com.forgedui.editor: Eclipse GEF MVC project / Eclipse project that includes Editors, Perspectives, Palettes, etc. 
+- com.forgedui.common.deps : Additional 3rd party depenencies that don't have their own repositories
+- com.forgedui.xstream: XML Serialization library (XStream) 
 
 
 
