@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.forgedui</groupId>
+	<artifactId>fuispace</artifactId>
+	<version>2.0.0-RELEASE</version>
+	<packaging>pom</packaging>
+
+	<repositories>
+		<repository>
+			<id>helios</id>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/releases/kepler</url>
+		</repository>
+	</repositories>
+
+
+	<modules>
+		<module>com.forgedui.common.deps</module>
+		<module>com.forgedui.core</module>
+		<module>com.forgedui.editor</module>
+		<module>com.forgedui.editor.updatesite</module>
+		<module>com.forgedui.features.editor</module>
+		<module>com.forgedui.xstream</module>
+	</modules>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.sonatype.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>0.11.1</version>
+				<extensions>true</extensions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.sonatype.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>0.11.1</version>
+				<configuration>
+					
+					<!--												
+					<resolver>p2</resolver>
+					 
+					<target>
+						<artifact>
+							<groupId>com.forgedui</groupId>
+							<artifactId>fuispace</artifactId>
+							<version>0.0.1-SNAPSHOT</version>
+							<classifier>indigo</classifier>
+						</artifact>
+					</target>
+					 
+					
+					<ignoreTychoRepositories>true</ignoreTychoRepositories>
+					-->					 
+					<environments>
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86</arch>
+						</environment>
+						<environment>
+							<os>macosx</os>
+							<ws>carbon</ws>
+							<arch>x86</arch>
+						</environment>
+						<environment>
+							<os>macosx</os>
+							<ws>cocoa</ws>
+							<arch>x86</arch>
+						</environment>
+						<environment>
+							<os>macosx</os>
+							<ws>cocoa</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86</arch>
+						</environment>
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86_64</arch>
+						</environment>
+					</environments>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+</project>

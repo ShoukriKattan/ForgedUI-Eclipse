@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.forgedui</groupId>
+    <artifactId>fuispace</artifactId>
+    <version>2.0.0-RELEASE</version>
+  </parent>
+  <groupId>com.forgedui</groupId>
+  <artifactId>com.forgedui.editor.updatesite.aggregator</artifactId>
+  <version>2.0.0-RELEASE</version>
+  <packaging>pom</packaging>
+  <modules>
+    <module>../com.forgedui.common.deps</module>
+    <module>../com.forgedui.core</module>
+    <module>../com.forgedui.editor</module>
+    <module>../com.forgedui.features.editor</module>
+    <module>../com.forgedui.xstream</module>
+    <module>.</module>
+  </modules>
+</project>

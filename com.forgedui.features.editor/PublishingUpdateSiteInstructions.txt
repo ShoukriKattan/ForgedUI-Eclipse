@@ -1,0 +1,55 @@
+1- Increment version for required plugins
+2- Increment version for the Feature 
+3- Update the Category XML with the correct feature 
+
+
+Security Feature : 
+IN the next build protect against re-installing Titanium studio by the same user. 
+If a user Trial's get exceeded ... thts it mark the account 
+On Each Trial contact server 
+
+Multiple marketplace IDs for the same user on same machine how can we protect against that?
+
+Query to look for cheaters 
+
+// Same Os User different User ID ( a Guy running multiple accounts from same machine) 
+select a.* from activation_request a , activation_request b where  a.id <> b.id and a.osuser = b.osuser and a.user_id <> b.user_id;
+
+// Same IP address running different users / accounts 
+ select a.* from activation_request a , activation_request b where  a.id <> b.id and a.ip_address = b.ip_address and a.user_id <> b.user_id;
+
+ //Same ForgedUI user on multiple machines multiple OSes 
+ select a.* from activation_request a , activation_request b where  a.id <> b.id and a.osuser <> b.osuser and a.user_id = b.user_id;
+ 
+ 
+ //Count of users  
+ select count(id) from sec_user
+ 
+ // Active free products   
+ select count(id) from forgeduicustomer_product where state='active' and product_id=1;
+ 
+ // Active paid products
+ select count(id) from forgeduicustomer_product where state='active' and product_id=2;
+ 
+ // Active Multi user product users 
+ select count(id) from forgeduicustomer_product where state='active' and product_id=3
+ 
+// Number of times code has been generated 
+ select count(id) from reporting_event where type="CODE_GENERATED"; 
+  
+// Number of components created 
+select count(id) from reporting_event where type="COMPONENT_CREATED"
+   
+// Number of projects created
+select count(id) from reporting_event where type="PROJECT_CREATED"
+
+// Number of windows created
+select count(id) from reporting_event where type="WINDOW_CREATED"
+
+
+//Number of plugin downloads 
+cat localhost_access_log.*  | grep -c  update_site/content.jar
+
+
+
+// 815 is the beta 

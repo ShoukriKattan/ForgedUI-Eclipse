@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>   
+   <feature url="features/org.eclipse.gef_3.9.1.qualifier" id="org.eclipse.gef" version="3.9.1.qualifier">
+      <category name="com.forgedui.categories.dependencies"/>
+   </feature>
+   <feature url="features/org.eclipse.draw2d_3.9.1.qualifier" id="org.eclipse.draw2d" version="3.9.1.qualifier">
+      <category name="com.forgedui.categories.dependencies"/>
+   </feature>
+   <feature url="com.forgedui.features.editor_2.0.0.qualifier" id="com.forgedui.features.editor" version="2.0.0.qualifier">
+      <category name="com.forgedui.categories.editors"/>
+   </feature>   
+   <category-def name="com.forgedui.categories.editors" label="ForgedUI Editor"/>
+   <category-def name="com.forgedui.categories.dependencies" label="Dependencies"/>
+</site>
